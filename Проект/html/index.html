@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>STUDYHUB</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <p class="txt">STUDYHUB</p>
+            <p class="btn-menu"><a class="txt" href="/html/index.html">Главная</a></p>
+            <p class="btn-menu"><a class="txt" href="/html/oge.html">ОГЭ</a></p>
+            <p class="btn-menu"><a class="txt" href="/html/ege.html">ЕГЭ</a></p>
+            <p class="btn-menu"><a class="txt" href="/html/vpr.html">ВПР</a></p>
+            <p class="btn-menu"><a class="txt" href="#contact">Контакты/О сайте</a></p>
+            <div id="theme" onclick="change_theme()"></div>
+        </nav>
+        <h1 class="txt-dif">Готовься к экзаменам легко</h1>
+        <p id="header_desc" class="txt-dif">Вся теория для ОГЭ, ЕГЭ и ВПР в одном месте</p>
+        <a href="#main"><button id="first_btn" class="txt">Начать готовиться</button></a>
+        <h1 id="max">Набери максимум</h1>
+    </header>
+    <section>
+        <h1>Почему мы?</h1>
+        <div id="group">
+            <div><img src="/icon/book.svg"><p class="txt">Полная теория</p></div>
+            <div><img src="/icon/free.svg"><p class="txt">Бесплатно</p></div>
+            <div><img src="/icon/compass.svg"><p class="txt">Удобная навигация</p></div>
+            <div><img src="/icon/beauty.svg"><p class="txt">Красивый дизайн</p></div>
+        </div>
+        
+    </section>
+    <main id="main">
+        <h1 class="txt-dif">Начни сейчас</h1>
+        <div id="box">
+            <div id="oge_box" class="card">
+                <h1 class="ttl txt-dif">ОГЭ</h1>
+                <p class="disc txt-dif">Основной государственный экзамен — для 9 класса. Готовься по всем предметам: теория, формулы, примеры.</p>
+                <a href="/html/oge.html" class="btn"><button class="txt-dif btn_bg">Начать изучать</button></a>
+            </div>
+
+            <div id="ege_box" class="card">
+                <h1 class="ttl txt-dif">ЕГЭ</h1>
+                <p class="disc txt-dif">Единый государственный экзамен — для 11 класса. Полный курс подготовки с объяснениями и схемами.</p>
+                <a href="/html/ege.html" class="btn"><button class="txt-dif btn_bg">Начать изучать</button></a>
+            </div>
+
+            <div id="vpr_box" class="card">
+                <h1 class="ttl txt-dif">ВПР</h1>
+                <p class="disc txt-dif">Всероссийская проверочная работа — для 4–11 классов. Смотри теорию и примеры заданий по каждому предмету.</p>
+                <a href="/html/vpr.html" class="btn"><button class="txt-dif btn_bg">Начать изучать</button></a>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contact">
+        <h1 class="txt-dif">Контакты</h1>
+        <div id="conteiner">
+            <p class="txt-dif">+7-ххх-ххх-хх-хх</p>
+            <p id="mail" class="txt-dif">examplemail@mail.ru</p>
+            <p class="txt-dif">@studyhub</p>
+        </div>
+        <p class="txt-dif">© 2025 STUDYHUB</p>
+    </footer>
+
+    <script src="/js/theme.js"></script>
+</body>
+</html>
