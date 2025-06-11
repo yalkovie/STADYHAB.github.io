@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+$black: #000000;
+$dark-gray: #1e1e1e;
+$grey: #bfbfbf;
+$white: #ffffff;
+$dark-white: #f4f4f4;
+$light-green: #65fd08;
+$dark-green: #16BC4E;
+$light-blue: #18c9c4;
+$gradient: linear-gradient(90deg, $light-green, $dark-green);
+$extra-bold: 800;
+$bold: 700;
+$semi-bold: 600;
+$medium: 500;
+$montserrat: 'Montserrat', sans-serif;
+$comfortaa: 'Comfortaa', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+    background-color: $black;
+    color: $white;
+    width: 100%;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    & nav {
+        width: 100%;
+        height: calc(150px / 1080px * 100vh);
+        background: $gradient;
+        border-radius: 0 0 25px 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        color: $black;
+        font-size: 2.25rem;
+        font-family: $montserrat;
+
+        & p {
+
+            & a {
+                text-decoration: none;
+                color: $black;
+            }
+
+            &:first-of-type {
+                font-size: 3rem;    
+                font-family: $comfortaa; 
+            }
+
+            &:not(:first-of-type) {
+                cursor: pointer;
+                transition: all .1s ease-in-out;
+
+                &:hover {
+                    font-size: 2.45rem;
+                    border-bottom: 2px solid $black;
+                }
+            }
+
+        }
+
+        & div {
+            width: calc(100px / 1920px * 100vw);
+            height: calc(100px / 1080px * 100vh);
+            border-radius: 100%;
+            background-color: $black;
+            cursor: pointer;
+            background-image: url(/icon/sun.svg);
+            background-size: 60%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    & h1 {
+        font-size: 6rem;
+        font-weight: $bold;
+        padding-top: calc(250px / 1080px * 100vh);
+        text-align: center;
+    }
+}
+
+footer {
+    width: 100%;
+    height: calc(540px / 1080px * 100vh);
+    background-color: $dark-white;
+    color: $black;
+    justify-items: center;
+
+    & h1 {
+        padding-top: calc(50px / 1080px * 100vh);
+        font-family: $montserrat;
+        font-size: 3rem;
+        font-weight: $semi-bold;
+    }
+
+    & #conteiner {
+        padding-top: calc(161px / 1080px * 100vh);
+        padding-bottom: calc(182px / 1080px * 100vh);
+        width: calc(1470px / 1920px * 100vw);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    & #mail {
+        position: relative;
+        top: 0;
+        left: -1vw;
+    }
+}
+
+// для 4k
+@media (max-width: 3840px) and (max-height: 2160px) {
+    header {
+        & nav {
+            font-size: 4.75rem;
+            border-radius: 0 0 45px 45px;
+
+            & p {
+                &:first-of-type {
+                    font-size: 6.25rem;
+                }
+
+                &:not(:first-of-type) {
+                    &:hover {
+                        font-size: 5.5rem;
+                        border-bottom: 3.5px solid;
+                    }
+                }
+            }
+        }
+    }
+
+    //
+
+    footer {
+        font-size: 2.5rem;
+
+        & h1 {
+            font-size: 7rem;
+        }
+    }
+}
+
+// для 2k
+@media (max-width: 2560px) and (max-height: 1440px) {
+    header {
+        & nav {
+            font-size: 3rem;
+            border-radius: 0 0 30px 30px;
+
+            & p {
+                &:first-of-type {
+                    font-size: 4.25rem;
+                }
+
+                &:not(:first-of-type) {
+                    &:hover {
+                        font-size: 3.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    //
+
+    footer {
+        font-size: 2rem;
+
+        & h1 {
+            font-size: 5rem;
+        }
+    }
+}
+
+// для FullHD
+@media (max-width: 1920px) and (max-height: 1080px) {
+    header {
+        & nav {
+            border-radius: 0 0 25px 25px;
+            font-size: 2.25rem;
+
+            & p {
+
+                &:first-of-type {
+                    font-size: 3rem;    
+                }
+
+                &:not(:first-of-type) {
+                    &:hover {
+                        font-size: 2.75rem;
+                        border-bottom: 2px solid;
+                    }
+                }
+            }
+        }
+    }
+
+    //
+
+    footer {
+        font-size: 1rem;
+
+        & h1 {
+            font-size: 3rem;
+        }
+    }
+}
+
+// для HD
+@media (max-width: 1280px) and (max-height: 720px) {
+    header {
+        & nav {
+            font-size: 1.5rem;
+
+            & p {
+                &:first-of-type {
+                    font-size: 2.25rem;
+                }
+
+                &:not(:first-of-type) {
+                    &:hover {
+                        font-size: 1.75rem;
+                    }
+                }
+            }
+        }
+    }
+
+    //
+
+    footer {
+        font-size: 0.75rem;
+        
+        & h1 {
+            font-size: 2.25rem;
+        }
+    }
+}

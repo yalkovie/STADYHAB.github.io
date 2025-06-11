@@ -1,0 +1,513 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@property --color-gradient-start {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #65fd08;
+}
+@property --color-gradient-end {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #16bc4e;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: color 0.25s ease-in-out;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(0deg, #16BC4E 0%, #65fd08 100%);
+  border-radius: 0.75vh;
+  border: 0.1041666667vw solid transparent;
+  background-clip: content-box;
+}
+
+html::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+html::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  width: 100%;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  perspective: 500px;
+  overflow-x: hidden;
+}
+header nav {
+  width: 100%;
+  height: 13.8888888889vh;
+  background: linear-gradient(90deg, #65fd08, #16BC4E);
+  border-radius: 0 0 25px 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #000000;
+  font-size: 2.25rem;
+  font-family: "Montserrat", sans-serif;
+}
+header nav p a {
+  border-color: #000000;
+  text-decoration: none;
+  color: #000000;
+}
+header nav p:first-of-type {
+  font-size: 3rem;
+  font-family: "Comfortaa", sans-serif;
+}
+header nav p:not(:first-of-type) {
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+header nav p:not(:first-of-type):hover {
+  font-size: 2.75rem;
+  border-color: #000000;
+  border-bottom: 2px solid;
+}
+header nav div {
+  width: 5.2083333333vw;
+  height: 9.2592592593vh;
+  border-radius: 100%;
+  background-color: #000000;
+  cursor: pointer;
+  background-image: url(/icon/sun.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  transition: all 0.35s ease-in-out;
+}
+header h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  padding-top: 23.1481481481vh;
+  padding-left: 7.8125vw;
+}
+header #header_desc {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-left: 7.8125vw;
+}
+header a {
+  height: 100%;
+  width: 100%;
+}
+header a #first_btn {
+  margin-top: 12.5925925926vh;
+  margin-left: 7.8125vw;
+  border-radius: 25px;
+  border: none;
+  width: 20.8333333333vw;
+  height: 9.2592592593vh;
+  background: linear-gradient(90deg, var(--color-gradient-start), var(--color-gradient-end));
+  font-size: 2.25rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #000000;
+  cursor: pointer;
+  transition: --color-gradient-start 0.5s ease-in-out, --color-gradient-end 0.5s ease-in-out, transform 0.25s ease-in-out, border-radius 0.25s ease-in-out;
+}
+header a #first_btn:hover {
+  transform: translateY(-1.5vh);
+  border-radius: 10px;
+  --color-gradient-start: #16bc4e;
+  --color-gradient-end: #65fd08;
+}
+header #max {
+  font-size: 8rem;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+  color: #18c9c4;
+  text-align: center;
+  position: absolute;
+  top: 32.4074074074vh;
+  left: 45.5729166667vw;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+}
+main h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+  padding-top: 8.3333333333vh;
+}
+main #box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 15.9259259259vh;
+}
+main #box div {
+  border-radius: 25px;
+  width: 20.8333333333vw;
+  height: 37.037037037vh;
+  background: linear-gradient(90deg, #65fd08, #16BC4E);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+main #box div .ttl {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 6rem;
+  text-align: center;
+  position: relative;
+  transition: all 0.35s ease-out;
+  z-index: 2;
+  padding-top: 13.1481481481vh;
+}
+main #box div .disc {
+  display: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  width: 18.2291666667vw;
+  height: 5.5555555556vh;
+  line-height: 1;
+  margin-top: 1.6203703704vh;
+}
+main #box div .btn {
+  display: none;
+  padding-top: 2.7777777778vh;
+}
+main #box div .btn button {
+  border: none;
+  border-radius: 25px;
+  background-color: #000000;
+  width: 18.2291666667vw;
+  height: 4.6296296296vw;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+main #box div:hover .ttl {
+  font-size: 4rem;
+  transform: translateY(-5vh);
+  padding-top: 8.3333333333vh;
+}
+main #box div:hover .disc {
+  display: block;
+}
+main #box div:hover .btn {
+  display: block;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  background-color: #1e1e1e;
+}
+section h1 {
+  padding-top: 15.7407407407vh;
+  padding-left: 7.8125vw;
+  font-family: "Montserrat", sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #65fd08, #16BC4E);
+  color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+section #group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 22.6851851852vh;
+}
+section #group div {
+  width: 20.8333333333vw;
+  height: 9.2592592593vh;
+  background: #18c9c4;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+section #group div img {
+  padding-right: 0.78125vw;
+  transition: filter 0.3s ease;
+  width: 3.3854166667vw;
+  height: 6.0185185185vh;
+}
+
+footer {
+  width: 100%;
+  height: 50vh;
+  background-color: #111111;
+  color: #ffffff;
+  justify-items: center;
+  font-size: 1rem;
+}
+footer h1 {
+  padding-top: 4.6296296296vh;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+}
+footer #conteiner {
+  padding-top: 14.9074074074vh;
+  padding-bottom: 16.8518518519vh;
+  width: 76.5625vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer #mail {
+  position: relative;
+  top: 0;
+  left: -1vw;
+}
+
+@media (max-width: 3840px) and (max-height: 2160px) {
+  header nav {
+    font-size: 4.75rem;
+    border-radius: 0 0 45px 45px;
+  }
+  header nav p:first-of-type {
+    font-size: 6.25rem;
+  }
+  header nav p:not(:first-of-type):hover {
+    font-size: 5.5rem;
+    border-bottom: 3.5px solid;
+  }
+  header h1 {
+    font-size: 7rem;
+  }
+  header #header_disc {
+    font-size: 3rem;
+  }
+  header a #first_btn {
+    font-size: 4rem;
+    border-radius: 45px;
+  }
+  header #max {
+    font-size: 15rem;
+  }
+  section h1 {
+    font-size: 7rem;
+  }
+  section #group div {
+    border-radius: 45px;
+    font-size: 3rem;
+  }
+  main h1 {
+    font-size: 7rem;
+  }
+  main #box div {
+    border-radius: 45px;
+  }
+  main #box div .ttl {
+    font-size: 12.5rem;
+  }
+  main #box div .disc {
+    font-size: 2.25rem;
+    margin-top: 1.8518518519vh;
+  }
+  main #box div .btn button {
+    border-radius: 45px;
+    font-size: 3rem;
+  }
+  main #box div:hover .ttl {
+    font-size: 8.5rem;
+  }
+  footer {
+    font-size: 2.5rem;
+  }
+  footer h1 {
+    font-size: 7rem;
+  }
+}
+@media (max-width: 2560px) and (max-height: 1440px) {
+  header nav {
+    font-size: 3rem;
+    border-radius: 0 0 30px 30px;
+  }
+  header nav p:first-of-type {
+    font-size: 4.25rem;
+  }
+  header nav p:not(:first-of-type):hover {
+    font-size: 3.5rem;
+  }
+  header h1 {
+    font-size: 5rem;
+  }
+  header #header_disc {
+    font-size: 2rem;
+  }
+  header a #first_btn {
+    font-size: 2.75rem;
+    border-radius: 30px;
+  }
+  header #max {
+    font-size: 10rem;
+  }
+  section h1 {
+    font-size: 5.5rem;
+  }
+  section #group div {
+    border-radius: 30px;
+    font-size: 2.5rem;
+  }
+  main h1 {
+    font-size: 5.5rem;
+  }
+  main #box div {
+    border-radius: 30px;
+  }
+  main #box div .ttl {
+    font-size: 8rem;
+  }
+  main #box div .disc {
+    font-size: 1.5rem;
+  }
+  main #box div .btn button {
+    border-radius: 30px;
+    font-size: 2.75rem;
+  }
+  main #box div:hover .ttl {
+    font-size: 6rem;
+  }
+  footer {
+    font-size: 2rem;
+  }
+  footer h1 {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 1920px) and (max-height: 1080px) {
+  header nav {
+    border-radius: 0 0 25px 25px;
+    font-size: 2.25rem;
+  }
+  header nav p:first-of-type {
+    font-size: 3rem;
+  }
+  header nav p:not(:first-of-type):hover {
+    font-size: 2.75rem;
+    border-bottom: 2px solid;
+  }
+  header h1 {
+    font-size: 4rem;
+  }
+  header #header_desc {
+    font-size: 1.5rem;
+  }
+  header a #first_btn {
+    border-radius: 25px;
+    font-size: 2.25rem;
+  }
+  header #max {
+    font-size: 8rem;
+  }
+  main h1 {
+    font-size: 4rem;
+  }
+  main #box div {
+    border-radius: 25px;
+  }
+  main #box div .ttl {
+    font-size: 6rem;
+  }
+  main #box div .disc {
+    font-size: 1rem;
+    margin-top: 3.2407407407vh;
+  }
+  main #box div .btn {
+    padding-top: 1.8518518519vh;
+  }
+  main #box div .btn button {
+    border-radius: 25px;
+    font-size: 2rem;
+  }
+  main #box div:hover .ttl {
+    font-size: 4rem;
+  }
+  section h1 {
+    font-size: 4rem;
+  }
+  section #group div {
+    border-radius: 25px;
+    font-size: 1.75rem;
+  }
+  footer {
+    font-size: 1rem;
+  }
+  footer h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 1280px) and (max-height: 720px) {
+  header nav {
+    font-size: 1.5rem;
+  }
+  header nav p:first-of-type {
+    font-size: 2.25rem;
+  }
+  header nav p:not(:first-of-type):hover {
+    font-size: 1.75rem;
+  }
+  header h1 {
+    font-size: 3.5rem;
+  }
+  header #header_desc {
+    font-size: 1rem;
+  }
+  header a #first_btn {
+    font-size: 1.5rem;
+    border-radius: 20px;
+  }
+  header #max {
+    font-size: 6rem;
+  }
+  main h1 {
+    font-size: 3rem;
+  }
+  main #box div .ttl {
+    font-size: 4rem;
+  }
+  main #box div .disc {
+    font-size: 0.75rem;
+  }
+  main #box div .btn button {
+    border-radius: 20px;
+    font-size: 1.25rem;
+  }
+  main #box div:hover .ttl {
+    font-size: 3rem;
+  }
+  section h1 {
+    font-size: 3rem;
+  }
+  section #group div {
+    font-size: 1rem;
+    border-radius: 20px;
+  }
+  footer {
+    font-size: 0.75rem;
+  }
+  footer h1 {
+    font-size: 2.25rem;
+  }
+}/*# sourceMappingURL=index.css.map */
